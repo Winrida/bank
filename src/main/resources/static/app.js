@@ -1,7 +1,6 @@
 $(function() {
     
-    
-    /* Fixed Header */
+
     let header = $("#header");
     let intro = $("#intro");
     let introH = intro.innerHeight();
@@ -24,8 +23,7 @@ $(function() {
             header.removeClass("fixed");
         }
     }
-    
-    /* Reviews: https://kenwheeler.github.io/slick/ */
+
     let slider = $("#reviewsSlider");
     
     slider.slick({
