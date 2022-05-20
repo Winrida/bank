@@ -1,6 +1,7 @@
 package com.wibank.bank.controllers;
 
 import com.wibank.bank.models.Amount;
+import com.wibank.bank.models.Reviews;
 import com.wibank.bank.repo.AmountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,8 +24,8 @@ public class addmoneyController {
 
     @PostMapping("/addmoney")
     public String AddmoneyAmount(@RequestParam int money, Model model) {
-        Amount amount = amountRepository.findById(4L).orElseThrow();
-        amount.setMoney(money+amount.getMoney());
+        Amount amount = Amount.getInstance(money);
+        amount.setMoney(amount.getMoney());
         amountRepository.save(amount);
 
         return "redirect:/mybank";

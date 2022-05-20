@@ -23,8 +23,8 @@ public class remittanceController {
     @PostMapping("/remittance")
     public String RemittanceMoneyAmount(@RequestParam int money, Model model) {
 
-        Amount amount = amountRepository.findById(4L).orElseThrow();
-        amount.setMoney(amount.getMoney()-money);
+        Amount amount = Amount.getInstance(-money);
+        amount.setMoney(amount.getMoney());
         amountRepository.save(amount);
 
         return "redirect:/mybank";

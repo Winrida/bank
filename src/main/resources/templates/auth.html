@@ -48,8 +48,8 @@
     <div class ="auth_page">
         <form th:action="@{/auth}" method="post">
             <h1>Авторизация</h1>
-            <input type="text" name="" placeholder="Имя пользователя">
-            <input type="password" name="" placeholder="Пароль">
+            <input type="text" name="username" placeholder="Имя пользователя">
+            <input type="password" name="password" placeholder="Пароль">
             <input type="submit" name="" value="Войти">
         </form>
             <input type="submit" onclick="location.href='/reg';" value="Создать">
