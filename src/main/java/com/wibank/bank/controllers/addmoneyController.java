@@ -23,7 +23,6 @@ public class addmoneyController {
 
     @PostMapping("/addmoney")
     public String AddmoneyAmount(@RequestParam int money, Model model) {
-
         Amount amount = amountRepository.findById(4L).orElseThrow();
         amount.setMoney(money+amount.getMoney());
         amountRepository.save(amount);

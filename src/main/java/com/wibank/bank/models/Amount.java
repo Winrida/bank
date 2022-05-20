@@ -1,5 +1,7 @@
 package com.wibank.bank.models;
 
+import org.hibernate.annotations.SQLInsert;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,10 +13,9 @@ public class Amount {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    
     private int money;
-    private int x;
-
+    
 
     public Amount(){
     }
@@ -37,13 +38,5 @@ public class Amount {
 
     public void setMoney(int money) {
         this.money = money;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int money) {
-        this.x = money;
     }
 }

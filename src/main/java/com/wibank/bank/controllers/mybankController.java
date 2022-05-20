@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class mybankController {
+    Amount amount = new Amount(0);
 
     @Autowired
     private AmountRepository amountRepository;
